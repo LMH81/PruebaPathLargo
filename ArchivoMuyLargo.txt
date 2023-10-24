@@ -1,0 +1,18 @@
+-----------------------------------------------------------------------
+##Incidencias con Path largos en Windows
+
+Como usuario quiero poder ejecutar el comando de git clone con paths o urls largas para  que poder trabajar con entornos asociados a  repositorios git, con paths configuradas muy largas, que exceden la config de git por defecto.
+
+
+Error:
+
+Fallo al clonar repositorios: error: 
+unable to create file accesoeducamosback/src/main/java/com/jccm/edu/papas/accesopapas/adapter/in/rest/api/prepararaccesoaplicacion/getaplicacionesusuario/AplicacionModel.java: Filename too long error: unable to create file accesoeducamosback/src/main/java/com/jccm/edu/papas/accesopapas/adapter/in/rest/api/prepararaccesoaplicacion/getaplicacionesusuario/GetDatosAplicacionesUsuario.java: Filename too long error: unable to create file
+
+Solución:
+
+git config --system core.longpaths true
+
+Implementación:
+
+Se propone ejecutar el comando: en la fase de pre-requisitos git.
